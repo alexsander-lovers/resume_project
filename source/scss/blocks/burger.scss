@@ -1,0 +1,36 @@
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  min-width: 40px;
+  height: 40px;
+  border: 1px solid $border__color;
+  border-radius: 5px;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.burger .burger__line {
+  display: block;
+  min-width: 18px;
+  height: 1.5px;
+  background-color: $text__color;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger.burger--is-active .burger__line:first-child {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.burger.burger--is-active .burger__line:last-child {
+  transform: translateY(-1.5px) rotate(-45deg);
+}
+
+@media (min-width: $min__width-tablet) {
+  .burger {
+    display: none;
+  }
+}

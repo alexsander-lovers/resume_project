@@ -1,0 +1,41 @@
+.button {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.button__icon {
+  width: 100%;
+  min-width: 260px;
+  max-width: 400px;
+  height: auto;
+}
+
+.button__icon text {
+  @extend %inter__tight-medium;
+  font-size: 14px;
+  fill: $bg__color;
+}
+
+.button__icon:hover path,
+.button__icon:active path {
+  fill: transparent;
+  stroke: $border__color-button;
+}
+
+.button__icon:hover .button-icon--arrow,
+.button__icon:active .button-icon--arrow {
+  fill: $text__color;
+}
+
+.button__icon:hover text,
+.button__icon:active text {
+  fill: $text__color;
+}
+
+// .button-icon:hover,
+// .button-icon:active {
+//   fill: $text__color;
+// }

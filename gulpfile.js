@@ -28,11 +28,11 @@ const images = gulp.parallel(convertToAvif, convertToWebp, optimizeRaster, copyS
 const font = gulp.series(otfToTtf, ttfToWoff2);
 
 function watcher () {
-  gulp.watch(path.watch.files, gulp.series(copy, ftp));
-  gulp.watch(path.watch.html, gulp.series(html, ftp));
-  gulp.watch(path.watch.scss, gulp.series(scss, ftp));
-  gulp.watch(path.watch.js, gulp.series(js, ftp));
-  gulp.watch(path.watch.images, gulp.series(images, ftp));
+  gulp.watch(path.watch.files, gulp.series(copy)); /*, ftp */
+  gulp.watch(path.watch.html, gulp.series(html));/*, ftp */
+  gulp.watch(path.watch.scss, gulp.series(scss));/*, ftp */
+  gulp.watch(path.watch.js, gulp.series(js));/*, ftp */
+  gulp.watch(path.watch.images, gulp.series(images));/*, ftp */
 }
 
 const mainTasks = gulp.series(font, gulp.parallel(copy, html, scss, js, images));

@@ -1,0 +1,28 @@
+.header-continer {
+  display: flex;
+  padding: 0 15px;
+  margin-top: 15px;
+}
+
+.header__logo {
+  margin-right: auto;
+  align-self: center;
+}
+
+.header__menu-language {
+  margin-right: 10px;
+}
+
+@media (min-width: $min__width-tablet) {
+  .header-continer {
+    justify-content: center;
+    margin-top: 35px;
+  }
+
+  .header__logo {
+    margin-right: 5px;
+    padding: 15px 20px;
+    border: 1px solid $border__color-another;
+    border-radius: 4px;
+  }
+}
