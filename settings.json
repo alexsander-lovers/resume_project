@@ -1,0 +1,8 @@
+{
+"emmet.includeLanguages": {
+    "html": "html"
+},
+"emmet.triggerExpansionOnTab": true,
+"editor.autoIndent": "full",
+"editor.formatOnType": true
+}

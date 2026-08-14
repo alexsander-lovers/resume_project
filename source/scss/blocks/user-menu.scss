@@ -6,17 +6,12 @@
   gap: 10px;
   min-width: 92px;
   min-height: 60px;
-  border: none;
   border: 1px solid $border__color;
   border-radius: 5px;
   background-color: transparent;
   cursor: pointer;
   font-size: 14px;
   padding: 0 5px;
-}
-
-.user-menu--active {
-    display: none;
 }
 
 .user-menu__point {
@@ -27,12 +22,15 @@
   border-radius: 1px;
 }
 
-@media (min-width: $min__width-laptops) {
-  .user-menu--active{
-      display: flex;
+.user-menu--active {
+  display: none;
+
+  @media (min-width: $min__width-laptops) {
+    display: flex;
+
     &:hover,
     &:active {
-    opacity: 0.7;
+      opacity: 0.7;
     }
   }
 }

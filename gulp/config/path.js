@@ -11,7 +11,10 @@ export const path = {
     css: `${buildFolder}/css/`,
     html: `${buildFolder}/`,
     images: `${buildFolder}/images/`,
-    files: `${buildFolder}/files/`
+    files: `${buildFolder}/files/`,
+    video: `${buildFolder}/video/`,
+    manifest: `${buildFolder}/`,
+    favicon: `${buildFolder}/`
   },
   source: {
     js: `${srcFolder}/js/app.js`,
@@ -20,14 +23,21 @@ export const path = {
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,gif,webp,avif}`,
     svg: `${srcFolder}/images/**/*.svg`,
     svgicons: `${srcFolder}/svgicons/*.svg`,
-    files: `${srcFolder}/files/**/*.*`
+    files: `${srcFolder}/files/**/*.*`,
+    video: `${srcFolder}/video/**/*.mp4`,
+    manifest: `${srcFolder}/*.webmanifest`,
+    favicon: `${srcFolder}/*.ico`
+
   },
   watch: {
     js: `${srcFolder}/js/**/*.js`,
     scss: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,
     images: `${srcFolder}/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp,avif}`,
-    files: `${srcFolder}/files/**/*.*`
+    files: `${srcFolder}/files/**/*.*`,
+    video: `${srcFolder}/video/**/*..mp4`,
+    manifest: `${srcFolder}/**/*.webmanifest`,
+    favicon: `${srcFolder}/**/*.ico`
   },
   clean: buildFolder,
   buildFolder: buildFolder,

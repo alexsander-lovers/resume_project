@@ -2,7 +2,7 @@ import gulp from 'gulp';
 
 import { path } from "./gulp/config/path.js";
 import { plugins } from "./gulp/config/plugins.js";
-import { copy } from "./gulp/tasks/copy.js";
+import { copyFiles, copyVideo, copyManifest, copyfavicon } from "./gulp/tasks/copy.js";
 import { reset } from "./gulp/tasks/reset.js";
 import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
@@ -24,6 +24,7 @@ global.app = {
   plugins: plugins
 };
 
+const copy = gulp.series(copyfavicon, copyFiles, copyVideo, copyManifest);
 const images = gulp.parallel(convertToAvif, convertToWebp, optimizeRaster, copySvg);
 const font = gulp.series(otfToTtf, ttfToWoff2);
 

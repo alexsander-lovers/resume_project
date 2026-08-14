@@ -4,10 +4,17 @@
 @import 'basic/fonts';
 @import 'basic/button';
 
+
+@import 'blocks/container';
 @import 'blocks/header';
 @import 'blocks/navigation';
 @import 'blocks/user-menu';
 @import 'blocks/burger';
 @import 'blocks/menu-language';
+@import 'blocks/logo';
+
+@import 'blocks/main-page';
+@import 'blocks/wrapper';
+@import 'blocks/hero';
 
 @import 'blocks/footer';

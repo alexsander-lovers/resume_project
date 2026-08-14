@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html_companents/head.html', {
-  'title': 'Портфолио: главная страница'
+@@include('html_companents/head.html', {
+'title': 'Портфолио: главная страница'
 })
+
 <body>
-  @@include('html_companents/header.html')
-  <main class="main-page"></main>
-  @@include('html_companents/footer.html')
+  <div class="container">
+    @@include('html_companents/header.html')
+    <main class="main-page">
+      <section class="hero">
+        <div class="hero__container">
+          <h1 class="hero__title">Твой дизайн в идеальном {коде}</h1>
+          <p class="hero__text">Профессиональная верстка сайтов с пиксельной точностью и без костылей.</p>
+          <div class="hero__wrapper">
+            <ul class="hero__list">
+              <li class="hero__item">HTML</li>
+              <li class="hero__item">CSS</li>
+              <li class="hero__item">JavaScript</li>
+              <li class="hero__item">React</li>
+              <li class="hero__item">AI</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html_companents/footer.html')
+  </div>
   <script src="js/app.min.js"></script>
 </body>
+
 </html>

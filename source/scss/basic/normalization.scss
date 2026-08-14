@@ -9,13 +9,24 @@ html {
 }
 
 body {
-  @extend %inter__tight-regular;
+@extend %inter__tight-regular;
   background-color: $bg__color;
   color: $text__color;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-size: 14px;
   line-height: 120%;
-  max-width: 1920px;
-  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
 }
 
 ul {
