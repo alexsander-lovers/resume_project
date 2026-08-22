@@ -5,10 +5,11 @@ export const copyFiles = () => {
 }
 
 export const copyVideo = () => {
-  return app.gulp.src(app.path.source.video)
+  return app.gulp.src(app.path.source.video, { encoding: false }) // Отключает перекодирование
     .pipe(app.gulp.dest(app.path.build.video))
     .pipe(app.plugins.browsersync.stream());
 }
+
 
 export const copyManifest = () => {
   return app.gulp.src(app.path.source.manifest)

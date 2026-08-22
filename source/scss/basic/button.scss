@@ -1,15 +1,47 @@
 .button {
+  position: relative;
   background-color: transparent;
-  width: 100%;
+  width: 255px;
   border: none;
   margin: 0 auto;
   cursor: pointer;
 }
 
+.button::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: 1px;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: background-color 0.5s ease;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: -5px;
+  width: 44px;
+  height: 44px;
+  mask-image: url('../images/icons/icon_arrow_down.svg');
+  mask-repeat: no-repeat;
+  background-color: $text__color;
+  transform: rotate(-90deg);
+  transition: background-color 0.5s ease;
+}
+
+.button:hover::before {
+   background-color: $text__color;
+}
+
+.button:hover::after {
+   background-color: $bg__color;
+}
+
 .button__icon {
-  width: 100%;
-  min-width: 260px;
-  max-width: 400px;
   height: auto;
 }
 
@@ -19,23 +51,42 @@
   fill: $bg__color;
 }
 
-.button__icon:hover path,
-.button__icon:active path {
+.button:hover path,
+.button:active path {
   fill: transparent;
   stroke: $border__color-button;
+  transition: fill 0.5s ease;
 }
 
-.button__icon:hover .button-icon--arrow,
-.button__icon:active .button-icon--arrow {
+.button:hover .button-icon--arrow,
+.button:active .button-icon--arrow {
   fill: $text__color;
+  transition: fill 0.5s ease;
 }
 
-.button__icon:hover text,
-.button__icon:active text {
+.button:hover text,
+.button:active text {
   fill: $text__color;
+  transition: fill 0.5s ease;
 }
 
-// .button-icon:hover,
-// .button-icon:active {
-//   fill: $text__color;
-// }
+@media(min-width: $min__width-tablet) {
+  .button {
+  width: 320px;
+}
+
+  .button::before {
+    top: 5px;
+    right: 5px;
+    width: 53px;
+    height: 53px;
+
+}
+
+.button::after {
+  top: -6px;
+  right: -7px;
+  width: 53px;
+  height: 53px;
+}
+}

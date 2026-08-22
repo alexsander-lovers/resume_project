@@ -9,7 +9,7 @@ html {
 }
 
 body {
-@extend %inter__tight-regular;
+  @extend %inter__tight-regular;
   background-color: $bg__color;
   color: $text__color;
   display: flex;

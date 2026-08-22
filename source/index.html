@@ -5,13 +5,32 @@
 })
 
 <body>
+  <div class="video-bg">
+    <video class="video-bg__media" autoplay muted loop playsinline>
+      <source src="video/hero.mp4" type="video/mp4">
+      Ваш браузер не поддерживает тег video.
+    </video>
+  </div>
   <div class="container">
     @@include('html_companents/header.html')
     <main class="main-page">
       <section class="hero">
         <div class="hero__container">
           <h1 class="hero__title">Твой дизайн в идеальном {коде}</h1>
-          <p class="hero__text">Профессиональная верстка сайтов с пиксельной точностью и без костылей.</p>
+          <div class="hero__inner">
+            <p class="hero__text">Профессиональная верстка сайтов с пиксельной точностью и без костылей.</p>
+            <button class="hero__inner-button button" type="button">
+              <svg class="button__icon" width="255" height="50" viewBox="0 0 255 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M198 0C200.761 5.15405e-07 203 2.23858 203 5V12H205V5C205 2.23858 207.239 4.0266e-08 210 0H250C252.761 6.44256e-07 255 2.23858 255 5V45C255 47.7614 252.761 50 250 50H210C207.239 50 205 47.7614 205 45V38H203V45C203 47.7614 200.761 50 198 50H5C2.23858 50 4.02673e-08 47.7614 0 45V5C6.44277e-07 2.23858 2.23858 0 5 0H198ZM230 4C218.402 4 209 13.402 209 25C209 36.598 218.402 46 230 46C241.598 46 251 36.598 251 25C251 13.402 241.598 4 230 4Z"
+                  fill="white" />
+                <text class="button__icon-text" x="20" y="30" font-family="Arial" font-size="14" fill="black">
+                  Получить консультацию
+                </text>
+              </svg>
+            </button>
+          </div>
           <div class="hero__wrapper">
             <ul class="hero__list">
               <li class="hero__item">HTML</li>
@@ -21,6 +40,36 @@
               <li class="hero__item">AI</li>
             </ul>
           </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__container">
+          <p class="about__subtitle">
+            <span class="about__text">01 // Обо мне // Александр Дудка</span>
+            <span class="about__text">Философия кода</span>
+          </p>
+          <h2 class="about__title">Frontend-разработчик (React / TypeScript / Git). Создаю адаптивные, быстрые и
+            кроссбраузерные веб-приложения. Пишу чистый, документированный код и строго следую современным стандартам
+            разработки.</h2>
+          <div class="about__wrapper">
+            <p class="about__subtext">Уделяю ключевое внимание Pixel Perfect верстке и плавной анимации. Стремлюсь к
+              тому,
+              чтобы каждый интерфейс был не просто рабочим, но и интуитивно понятным для конечного пользователя.</p>
+            <p class="about__subtext about__subtext--mobile">Постоянно развиваю навыки и внедряю лучшие практики
+              разработки. Ищу команду,
+              ориентированную на качество кода и продукта.</p>
+          </div>
+          <ul class="about__list">
+            <li class="about__item">
+              <span class="visually-hidden">Декоративный элемент</span>
+            </li>
+            <li class="about__item">
+              <span class="visually-hidden">Декоративный элемент</span>
+            </li>
+            <li class="about__item">
+              <span class="visually-hidden">Декоративный элемент</span>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
