@@ -9,7 +9,8 @@
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "deploy": "gulp deployFTP --build",
-    "svgSprit": "gulp svgSprit"
+    "svgSprit": "gulp svgSprit",
+    "deployGit": "gh-pages -d resume_project"
   },
   "repository": {
     "type": "git",
