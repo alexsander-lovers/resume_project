@@ -38,16 +38,15 @@
   background-color: $text__color;
   bottom: -3px;
   left: 0;
-
 }
 
 .navigation__user-menu {
   margin-left: 5px;
 }
 
- .navigation__button {
-    width: 260px;
-  }
+.navigation__button {
+  width: 260px;
+}
 
 @media (min-width: $min__width-small) {
   .navigation__list {

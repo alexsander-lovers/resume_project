@@ -2,10 +2,6 @@
   margin-bottom: 70px;
 }
 
-.about__container {
-  padding: 0 10px;
-}
-
 .about__subtitle {
   font-size: 12px;
   display: flex;
@@ -102,10 +98,6 @@
 
 
 @media(min-width: $min__width-tablet) {
-  .about__container {
-    padding: 0 40px;
-  }
-
   .about__subtitle {
     margin-bottom: 27px;
   }
@@ -193,8 +185,12 @@
 
 }
 
-
 @media(min-width: $min__width-desktop) {
+
+  .about {
+    margin-bottom: 150px;
+  }
+
   .about__inner {
     row-gap: 328px;
   }
@@ -221,99 +217,3 @@
     filter: blur(2px);
   }
 }
-
-
-
-
-
-
-
-// @media(min-width: $min__width-tablet) {
-//   .about {
-//     margin-bottom: 150px;
-//   }
-
-//   .about__container {
-//     padding: 0 40px;
-//   }
-
-//   .about__subtitle {
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     font-size: 16px;
-//     margin-bottom: 27px;
-//   }
-
-//   .about__title-wrapper {
-//     position: relative;
-//     display: block;
-//     margin-left: 674px;
-//   }
-
-//   .about__title-wrapper::before {
-//     position: absolute;
-//     content: '';
-//     width: 666px;
-//     height: 708px;
-//     top:0 ;
-//     left: -674px;
-//     z-index: -1;
-//     border-radius: 40px;
-//     background-color: $bg__color;
-//     background-size: cover;
-//     background-position: left;
-//     background-repeat: no-repeat;
-//     background-image: image-set(
-//     url("../images/about_background_image--desktop.avif") type("image/avif"),
-//     url("../images/about_background_image--desktop.webp") type("image/webp"),
-//     url("../images/about_background_image--desktop.jpg") type("image/jpeg")
-//   );
-
-//   @media(min-resolution: 2dppx) {
-//       background-image: image-set(
-//       url("../images/about_background_image--desktop@2x.avif") type("image/avif"),
-//       url("../images/about_background_image--desktop@2x.webp") type("image/webp"),
-//       url("../images/about_background_image--desktop@2x.jpg") type("image/jpeg")
-//       )
-//     }
-//   }
-
-//   .about__wrapper {
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     position: static;
-//     font-size: 16px;
-//   }
-
-//   .about__subtext {
-//     grid-column: 2/3
-//   }
-
-//   .about__wrapper::after {
-//     display: none;
-//   }
-
-//   .about__title-text {
-//     filter: blur(1px);
-//   }
-
-//   .about__title-text--another {
-//     color: $main-text__color-another;
-//   }
-
-//   .about__list {
-//     display: none;
-//   }
-// }
-
-// @media(min-width: $min__width-desktop) {
-//   .about__title {
-//     font-size: 74px;
-//     line-height: 95%;
-//     letter-spacing: -0.03em;
-//   }
-
-//    .about__title-text {
-//     filter: blur(2px);
-//   }
-// }
