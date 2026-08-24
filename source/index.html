@@ -91,23 +91,25 @@
           <ul class="skills__list">
             <li class="skills__item">
               <div class="skills__item-wrapper">
-                <picture>
-                  <source type="image/avif" media="(min-width: 768px)"
-                    srcset="images/skills_card_1--desktop.avif 1x, images/skills_card_1--desktop@2x.avif 2x">
-                  <source type="image/avif"
-                    srcset="images/skills_card_1--mobail.avif 1x, images/skills_card_1--mobail@2x.avif 2x">
+                <div class="skills__wrapper-img">
+                  <picture>
+                    <source type="image/avif" media="(min-width: 768px)"
+                      srcset="images/skills_card_1--desktop.avif 1x, images/skills_card_1--desktop@2x.avif 2x">
+                    <source type="image/avif"
+                      srcset="images/skills_card_1--mobail.avif 1x, images/skills_card_1--mobail@2x.avif 2x">
 
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="images/skills_card_1--desktop.webp 1x, images/skills_card_1--desktop@2x.webp 2x">
-                  <source type="image/webp"
-                    srcset="images/skills_card_1--mobail.webp 1x, images/skills_card_1--mobail@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="images/skills_card_1--desktop.webp 1x, images/skills_card_1--desktop@2x.webp 2x">
+                    <source type="image/webp"
+                      srcset="images/skills_card_1--mobail.webp 1x, images/skills_card_1--mobail@2x.webp 2x">
 
-                  <source media="(min-width: 768px)"
-                    srcset="images/skills_card_1--desktop.png 1x, images/skills_card_1--desktop@2x.png 2x">
-                  <img class="skills__img" src="images/skills_card_1--mobail.png"
-                    srcset="images/skills_card_1--mobail@2x.png 2x" alt="Показывается декоративный элемент" width="312"
-                    height="227">
-                </picture>
+                    <source media="(min-width: 768px)"
+                      srcset="images/skills_card_1--desktop.png 1x, images/skills_card_1--desktop@2x.png 2x">
+                    <img class="skills__img" src="images/skills_card_1--mobail.png"
+                      srcset="images/skills_card_1--mobail@2x.png 2x" alt="Показывается декоративный элемент"
+                      width="312" height="227">
+                  </picture>
+                </div>
                 <div class="skills__inner">
                   <div class="skills__continer-number">
                     <img src="images/icons/skill_card_icon-left.svg" width="10" height="30"
@@ -116,10 +118,47 @@
                     <img src="images/icons/skill_card_icon-right.svg" width="10" height="30"
                       alt="Обрамление для заголовка">
                   </div>
-                  <h4 class="skills__subtitle">Базовый стек</h4>
-                  <p class="skills__text">(HTML5 / CSS3 / Семантика) — умение создавать доступную, кроссбраузерную и
+                  <h4 class="skills__subtitle-abother">Базовый стек</h4>
+                  <p class="skills__subtext">(HTML5 / CSS3 / Семантика) — умение создавать доступную, кроссбраузерную и
                     адаптивную верстку по методологии БЭМ или с использованием Tailwind CSS.</p>
                 </div>
+              </div>
+            </li>
+            <li class="skills__item">
+              <div class="skills__item-wrapper">
+                <div class="skills__wrapper-img skills__wrapper-img--odd">
+                  <picture>
+                    <source type="image/avif" media="(min-width: 768px)"
+                      srcset="images/skills_card_2--desktop.avif 1x, images/skills_card_2--desktop@2x.avif 2x">
+                    <source type="image/avif"
+                      srcset="images/skills_card_2--mobail.avif 1x, images/skills_card_2--mobail@2x.avif 2x">
+
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="images/skills_card_2--desktop.webp 1x, images/skills_card_2--desktop@2x.webp 2x">
+                    <source type="image/webp"
+                      srcset="images/skills_card_2--mobail.webp 1x, images/skills_card_2--mobail@2x.webp 2x">
+
+                    <source media="(min-width: 768px)"
+                      srcset="images/skills_card_2--desktop.png 1x, images/skills_card_2--desktop@2x.png 2x">
+                    <img class="skills__img" src="images/skills_card_1--mobail.png"
+                      srcset="images/skills_card_2--mobail@2x.png 2x" alt="Показывается декоративный элемент"
+                      width="312" height="227">
+                  </picture>
+                </div>
+
+                <div class="skills__inner skills__inner--odd">
+                  <div class="skills__continer-number">
+                    <img src="images/icons/skill_card_icon-left.svg" width="10" height="30"
+                      alt="Обрамление для заголовка">
+                    <h3 class="skills__title">02</h3>
+                    <img src="images/icons/skill_card_icon-right.svg" width="10" height="30"
+                      alt="Обрамление для заголовка">
+                  </div>
+                  <h4 class="skills__subtitle-abother">JavaScript TypeScript</h4>
+                  <p class="skills__subtext">уверенное знание синтаксиса, асинхронного кода, работы с API и типизации
+                    для создания стабильных приложений.</p>
+                </div>
+
               </div>
             </li>
           </ul>
@@ -133,6 +172,31 @@
             <span class="stages-work__text">03 // Этапы работ</span>
             <span class="stages-work__text">Шаги процесса</span>
           </p>
+          <div class="stages-work__wrapper">
+            <h3 class="stages-work__title">Первичный контакт и оценка задачи</h3>
+            <ul class="stages-work__list">
+              <li class="stages-work__item">
+                <h4 class="stages-work__subtitle">/ /Брифинг </h4>
+                <p class="stages-work__text">Созваниваюсь или списываюсь с вами, чтобы детально обсудить проект и
+                  погрузиться в задачу.</p>
+              </li>
+              <li class="stages-work__item">
+                <h4 class="stages-work__subtitle">/ /Технический анализ макета</h4>
+                <p class="stages-work__text">Внимательно проверяю дизайн в Figma перед началом разработки.
+                  Контролирую
+                  наличие мобильной версии, адаптивных сеток и всех интерактивных состояний: от ховеров и фокусов кнопок
+                  до раскрывающихся меню.</p>
+              </li>
+              <li class="stages-work__item">
+                <h4 class="stages-work__subtitle">/ /Фиксация ТЗ и условий</h4>
+                <p class="stages-work__text">Составляю детальное техническое задание или дополняю ваше. Четко
+                  прописываю стек технологий, поддерживаемые браузеры и сложность анимаций. Это гарантирует
+                  прозрачность:
+                  мы оба точно знаем, какой результат будет на выходе.</p>
+              </li>
+            </ul>
+            <div class="stages-work__progress progress"></div>
+          </div>
         </div>
       </section>
       <section class="education">
@@ -142,6 +206,40 @@
             <span class="education__text">04 // Образование</span>
             <span class="education__text">с 2023 по настоящие время...</span>
           </p>
+          <h3 class="education__title">
+            Мой путь во фронтенд начался в HTML Academy, где я защитил все проекты на 100 баллов и получил официальные
+            сертификаты.
+          </h3>
+          <p class="education__subtext">Логическим продолжением учебы стала стажировка в компании «Лига А», где я
+            получил
+            ценный опыт коммерческой разработки и создания реальных веб-интерфейсов в команде.</p>
+          <p class="education__subtext">Я не останавливаюсь на достигнутом и постоянно углубляю свои знания: регулярно
+            изучаю профильную литературу, включая такие фундаментальные труды, как «Выразительный JavaScript», и
+            осваиваю новые инструменты для создания чистого, эффективного кода.</p>
+          <div class="education__wrapper">
+            <div class="education__inner">
+              <h3 class="education__title education__title--size">HTML<span>Academy</span></h3>
+              <ul class="education__list">
+                <li class="education__item">/ /Семантическая и адаптивная вёрстка (HTML5 и CSS3)</li>
+                <li class="education__item">/ /Продвинутая работа с CSS (Flexbox, Grid, Sass/LESS)</li>
+                <li class="education__item">/ /Сборка и автоматизация</li>
+                <li class="education__item">/ /Базовый и продвинутый JavaScript</li>
+                <li class="education__item">/ /Работа с библиотеками/фреймворками</li>
+                <li class="education__item">/ /Тестирование и бэкенд</li>
+              </ul>
+            </div>
+            <button class="education__button button" type="button">
+              <svg class="education__icon button__icon" width="255" height="50" viewBox="0 0 255 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M198 0C200.761 5.15405e-07 203 2.23858 203 5V12H205V5C205 2.23858 207.239 4.0266e-08 210 0H250C252.761 6.44256e-07 255 2.23858 255 5V45C255 47.7614 252.761 50 250 50H210C207.239 50 205 47.7614 205 45V38H203V45C203 47.7614 200.761 50 198 50H5C2.23858 50 4.02673e-08 47.7614 0 45V5C6.44277e-07 2.23858 2.23858 0 5 0H198ZM230 4C218.402 4 209 13.402 209 25C209 36.598 218.402 46 230 46C241.598 46 251 36.598 251 25C251 13.402 241.598 4 230 4Z"
+                  fill="white" />
+                <text class="button__icon-text" x="20" y="30" font-family="Arial" font-size="14" fill="black">
+                  Посмотреть сертификаты
+                </text>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
     </main>

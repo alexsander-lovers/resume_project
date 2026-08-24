@@ -19,6 +19,7 @@
 }
 
 .about__wrapper {
+  @extend %roboto-mono-regular;
   position: relative;
   color: $main-text__color;
   margin-bottom: 5px;

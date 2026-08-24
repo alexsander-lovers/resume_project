@@ -29,7 +29,7 @@
 
 .hero__text {
   color: $main-text__color;
-
+  @extend %roboto-mono-regular;
 }
 
 .hero__list {
@@ -38,6 +38,7 @@
   justify-content: center;
   gap: 2px 30px;
   padding: 0 40px 15px;
+  @extend %roboto-mono-regular;
 }
 
 .hero__item {
