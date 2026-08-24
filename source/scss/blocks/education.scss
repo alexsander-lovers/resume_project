@@ -1,0 +1,17 @@
+.education {
+  margin-bottom: 70px;
+}
+
+.education__subtitle {
+  margin-bottom: 15px;
+}
+
+@media(min-width: $min__width-tablet) {
+  .education {
+    margin-bottom: 150px;
+  }
+
+  .education__subtitle {
+    margin-bottom: 70px;
+  }
+}

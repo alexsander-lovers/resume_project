@@ -81,6 +81,69 @@
           </ul>
         </div>
       </section>
+      <section class="skills">
+        <div class="skills__container main-wrapper">
+          <h2 class="visually-hidden">Навыки</h2>
+          <p class="skills__subtitle subtitle">
+            <span class="skills__text">02 // Навыки </span>
+            <span class="skills__text">Hard Skills</span>
+          </p>
+          <ul class="skills__list">
+            <li class="skills__item">
+              <div class="skills__item-wrapper">
+                <picture>
+                  <source type="image/avif" media="(min-width: 768px)"
+                    srcset="images/skills_card_1--desktop.avif 1x, images/skills_card_1--desktop@2x.avif 2x">
+                  <source type="image/avif"
+                    srcset="images/skills_card_1--mobail.avif 1x, images/skills_card_1--mobail@2x.avif 2x">
+
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="images/skills_card_1--desktop.webp 1x, images/skills_card_1--desktop@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="images/skills_card_1--mobail.webp 1x, images/skills_card_1--mobail@2x.webp 2x">
+
+                  <source media="(min-width: 768px)"
+                    srcset="images/skills_card_1--desktop.png 1x, images/skills_card_1--desktop@2x.png 2x">
+                  <img class="skills__img" src="images/skills_card_1--mobail.png"
+                    srcset="images/skills_card_1--mobail@2x.png 2x" alt="Показывается декоративный элемент" width="312"
+                    height="227">
+                </picture>
+                <div class="skills__inner">
+                  <div class="skills__continer-number">
+                    <img src="images/icons/skill_card_icon-left.svg" width="10" height="30"
+                      alt="Обрамление для заголовка">
+                    <h3 class="skills__title">01</h3>
+                    <img src="images/icons/skill_card_icon-right.svg" width="10" height="30"
+                      alt="Обрамление для заголовка">
+                  </div>
+                  <h4 class="skills__subtitle">Базовый стек</h4>
+                  <p class="skills__text">(HTML5 / CSS3 / Семантика) — умение создавать доступную, кроссбраузерную и
+                    адаптивную верстку по методологии БЭМ или с использованием Tailwind CSS.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </section>
+      <section class="stages-work">
+        <h2 class="visually-hidden">Этапы работ</h2>
+        <div class="stages-work__container main-wrapper">
+          <p class="stages-work__subtitle subtitle">
+            <span class="stages-work__text">03 // Этапы работ</span>
+            <span class="stages-work__text">Шаги процесса</span>
+          </p>
+        </div>
+      </section>
+      <section class="education">
+        <h2 class="visually-hidden">Образование</h2>
+        <div class="education__container main-wrapper">
+          <p class="education__subtitle subtitle">
+            <span class="education__text">04 // Образование</span>
+            <span class="education__text">с 2023 по настоящие время...</span>
+          </p>
+        </div>
+      </section>
     </main>
     @@include('html_companents/footer.html')
   </div>

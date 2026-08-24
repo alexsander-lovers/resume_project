@@ -1,0 +1,17 @@
+.stages-work {
+  margin-bottom: 70px;
+}
+
+.stages-work__subtitle {
+  margin-bottom: 15px;
+}
+
+@media(min-width: $min__width-tablet) {
+  .stages-work {
+    margin-bottom: 150px;
+  }
+
+  .stages-work__subtitle {
+    margin-bottom: 70px;
+  }
+}
