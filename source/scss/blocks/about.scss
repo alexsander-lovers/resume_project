@@ -94,9 +94,6 @@
   background-image: url(../images/about_icon_3.svg);
 }
 
-
-
-
 @media(min-width: $min__width-tablet) {
   .about__subtitle {
     margin-bottom: 27px;
@@ -182,11 +179,9 @@
   .about__title-wrapper {
     margin-left: 408px;
   }
-
 }
 
 @media(min-width: $min__width-desktop) {
-
   .about {
     margin-bottom: 150px;
   }
@@ -209,11 +204,11 @@
     min-width: 666px;
   }
 
-    .about__wrapper {
+  .about__wrapper {
     grid-column: 4/-2;
   }
 
-   .about__title-text {
+  .about__title-text {
     filter: blur(2px);
   }
 }
