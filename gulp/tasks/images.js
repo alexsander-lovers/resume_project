@@ -12,7 +12,7 @@ export const convertToAvif = () => {
       })
     ))
     .pipe(app.plugins.newer(app.path.build.images))
-    .pipe(app.plugins.if(app.isBuild, avif({ quality: 80 }))) // Явно задаем качество, чтобы избежать багов сжатия по умолчанию
+    .pipe(app.plugins.if(app, avif({ quality: 80 }))) // Явно задаем качество, чтобы избежать багов сжатия по умолчанию
     .pipe(app.gulp.dest(app.path.build.images))
     .pipe(app.plugins.browsersync.stream());
 };
@@ -26,7 +26,7 @@ export const convertToWebp = () => {
       })
     ))
     .pipe(app.plugins.newer(app.path.build.images))
-    .pipe(app.plugins.if(app.isBuild, webp({ quality: 80 }))) // Явно задаем качество, чтобы избежать багов сжатия по умолчанию
+    .pipe(app.plugins.if(app, webp({ quality: 80 }))) // Явно задаем качество, чтобы избежать багов сжатия по умолчанию
     .pipe(app.gulp.dest(app.path.build.images))
     .pipe(app.plugins.browsersync.stream());
 };
@@ -40,7 +40,7 @@ export const optimizeRaster = () => {
       })
     ))
     .pipe(app.plugins.newer(app.path.build.images))
-    .pipe(app.plugins.if(app.isBuild, imagemin({
+    .pipe(app.plugins.if(app, imagemin({
       progressive: true,
       interlaced: true,
       optimizationLevel: 3

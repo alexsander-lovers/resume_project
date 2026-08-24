@@ -3,17 +3,15 @@
 }
 
 .hero__container {
-position: relative;
-  min-height: 90vh; /* Растягивает секцию на весь экран (по желанию) */
+  position: relative;
+  min-height: 88vh;
   display: flex;
   flex-direction: column;
-  justify-content: start; /* Центрирует контент внутри hero */
+  justify-content: start;
   overflow: hidden;
 }
 
 .hero__wrapper {
-  align-self: flex-end;
-  flex-shrink: 1;
   margin-top: auto;
 }
 
@@ -67,74 +65,73 @@ position: relative;
 
 @media(min-width: $min__width-tablet) {
 
-
-.hero__wrapper {
-  align-self: center;
-}
+  .hero__wrapper {
+    align-self: center;
+  }
 
   .hero__inner-button {
     display: block;
  }
 
-.hero__title {
-  font-size: 55px;
-  text-align: center;
-}
+  .hero__title {
+    font-size: 55px;
+    text-align: center;
+  }
 
   .hero__text {
   text-align: center;
   margin-bottom: 25px;
-}
-.button__icon {
-  width: 320px;
-}
-}
+  }
+
+  .button__icon {
+    width: 320px;
+  }
+  }
 
 @media(min-width: $min__width-laptops) {
-.hero {
-  margin-bottom: 150px;
-}
+  .hero {
+    margin-bottom: 150px;
+  }
 
-.hero__container {
-  align-items: flex-end;
-  justify-content: space-between;
-  flex-direction: row;
-  min-height: 83vh;
-  padding: 0 50px;
-  gap: 20px
-}
+  .hero__container {
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: row;
+    min-height: 83vh;
+    padding: 0 50px;
+    gap: 20px
+  }
 
-.hero__inner {
-  padding: 0;
-}
+  .hero__inner {
+    padding: 0;
+  }
 
-.hero__wrapper {
-  display: flex;
-  flex-grow: 1;
-  position: static;
-}
+  .hero__wrapper {
+    display: flex;
+    flex-grow: 1;
+  }
 
-.hero__text {
-  font-size: 16px;
-  width: 285px;
-  text-align: left;
-}
+  .hero__text {
+    font-size: 16px;
+    width: 285px;
+    text-align: left;
+  }
 
-.hero__inner {
-  order: 2;
-}
+  .hero__inner {
+    order: 2;
+  }
 
-.hero__list {
-  font-size: 16px;
-  margin-top: 0;
-  padding: 0;
-}
+  .hero__list {
+    font-size: 16px;
+    margin-top: 0;
+    padding: 0;
+  }
 
-.hero__wrapper {
-  display: flex;
-  flex-grow: 1;
-  position: static;
-}
+  .hero__wrapper {
+    display: flex;
+    flex-grow: 1;
+    position: static;
+  }
 }
 
 @media(min-width: $min__width-desktop) {

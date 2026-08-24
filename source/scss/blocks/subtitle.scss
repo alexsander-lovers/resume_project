@@ -1,0 +1,20 @@
+.subtitle {
+  position: relative;
+}
+
+.subtitle::after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-color: $border__color;
+  bottom: -8px;
+}
+
+@media(min-width: $min__width-tablet) {
+  .subtitle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 16px;
+  }
+}
