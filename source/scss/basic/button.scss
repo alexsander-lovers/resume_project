@@ -5,88 +5,83 @@
   border: none;
   margin: 0 auto;
   cursor: pointer;
-}
 
-.button::before {
-  content: '';
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  width: 44px;
-  height: 44px;
-  background-color: transparent;
-  border-radius: 50%;
-  transition: background-color 0.5s ease;
-}
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    transition: background-color 0.5s ease;
+  }
 
-.button::after {
-  content: '';
-  position: absolute;
-  top: -4px;
-  right: -3px;
-  width: 44px;
-  height: 44px;
-  mask-image: url('../images/icons/icon_arrow_down.svg');
-  mask-repeat: no-repeat;
-  background-color: $text__color;
-  transform: rotate(-90deg);
-  transition: background-color 0.5s ease;
-}
+  &::before {
+    top: 4px;
+    right: 4px;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border-radius: 50%;
+  }
 
-.button:hover::before {
-   background-color: $text__color;
-}
+  &::after {
+    top: -4px;
+    right: -3px;
+    width: 44px;
+    height: 44px;
+    mask-image: url('../images/icons/icon_arrow_down.svg');
+    mask-repeat: no-repeat;
+    background-color: $text__color;
+    transform: rotate(-90deg);
+  }
 
-.button:hover::after {
-   background-color: $bg__color;
-}
+  &:hover {
+    &::before {
+      background-color: $text__color;
+    }
+    &::after {
+      background-color: $bg__color;
+    }
+  }
 
-.button__icon {
-  height: auto;
-}
+  &__icon {
+    height: auto;
 
-.button__icon text {
-  @extend %inter__tight-medium;
-  font-size: 14px;
-  fill: $bg__color;
-}
+    text {
+      @extend %inter__tight-medium;
+      font-size: 14px;
+      fill: $bg__color;
+    }
+  }
 
-.button:hover path,
-.button:active path {
-  fill: transparent;
-  stroke: $border__color-button;
-  transition: fill 0.5s ease;
-}
+  &:hover,
+  &:active {
+    path {
+      fill: transparent;
+      stroke: $border__color-button;
+      transition: fill 0.5s ease;
+    }
 
-.button:hover .button-icon--arrow,
-.button:active .button-icon--arrow {
-  fill: $text__color;
-  transition: fill 0.5s ease;
-}
+    .button-icon--arrow,
+    text {
+      fill: $text__color;
+      transition: fill 0.5s ease;
+    }
+  }
 
-.button:hover text,
-.button:active text {
-  fill: $text__color;
-  transition: fill 0.5s ease;
-}
+  @media (min-width: $min__width-tablet) {
+    width: 320px;
 
-@media(min-width: $min__width-tablet) {
-  .button {
-  width: 320px;
-}
+    &::before {
+      top: 5px;
+      right: 5px;
+      width: 53px;
+      height: 53px;
+    }
 
-  .button::before {
-    top: 5px;
-    right: 5px;
-    width: 53px;
-    height: 53px;
-
-}
-
-.button::after {
-  top: -6px;
-  right: -7px;
-  width: 53px;
-  height: 53px;
-}
+    &::after {
+      top: -6px;
+      right: -7px;
+      width: 53px;
+      height: 53px;
+    }
+  }
 }

@@ -1,0 +1,41 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: $border__color;
+
+  &.modal-open {
+    display: flex;
+  }
+}
+
+.modal__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 11px auto auto;
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 15px 20px;
+  margin: 0 15px;
+  background-color: $bg__color;
+  border-radius: 10px;
+
+  @media (min-width: $min__width-tablet) {
+    padding: 30px;
+    margin: 0 30px;
+  }
+}
+
+.modal__button {
+  align-self: flex-end;
+}

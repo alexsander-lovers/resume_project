@@ -1,11 +1,13 @@
-  @media(min-width: $min__width-laptops) {
-  .logo__images {
+.logo__images {
+  @media (min-width: $min__width-laptops) {
     width: 117px;
     height: 44px;
   }
 
-  .logo__images--header {
-    width: 70px;
-    height: 26px;
+  &--header {
+    @media (min-width: $min__width-laptops) {
+      width: 70px;
+      height: 26px;
+    }
   }
 }

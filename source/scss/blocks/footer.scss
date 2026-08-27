@@ -1,119 +1,135 @@
 .footer-container {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 0 27px;
+
+  @media (min-width: $min__width-laptops) {
+    padding: 0 50px;
+  }
 }
 
-.footer__logo {
-  margin-bottom: 50px;
-}
+.footer {
+  &__logo {
+    margin-bottom: 50px;
 
-.footer__text {
+    @media (min-width: $min__width-laptops) {
+      margin-bottom: 130px;
+    }
+  }
+
+  &__icon-logo {
+    @media (min-width: $min__width-laptops) {
+      width: 117px;
+      height: 44px;
+    }
+  }
+
+  &__text {
     @extend %roboto-mono-regular;
-  text-align: center;
-  margin-bottom: 50px;
-  min-width: 275px;
-  max-width: 430px;
-}
+    text-align: center;
+    margin-bottom: 50px;
+    min-width: 275px;
+    max-width: 430px;
 
-.footer__icon {
-  margin-bottom: 50px;
-}
+    @media (min-width: $min__width-laptops) {
+      margin-bottom: 30px;
+    }
+  }
 
-.footer__wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px 0;
-  margin-bottom: 30px;
-}
+  &__icon {
+    margin-bottom: 50px;
 
-.footer__list {
-  @extend %roboto-mono-regular;
-  text-align: center;
-}
+    @media (min-width: $min__width-laptops) {
+      margin-bottom: 0;
+      width: 50px;
+      height: 50px;
+    }
+  }
 
-.footer__item > span {
-  display: block;
-  margin-top: 35px;
-}
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px 0;
+    margin-bottom: 30px;
 
-.footer__item:not(:last-child) {
-  margin-bottom: 15px;
-}
+    @media (min-width: $min__width-laptops) {
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 0;
+      align-self: stretch;
+      margin-bottom: 50px;
+    }
+  }
 
-.footer__link {
-  position: relative;
-  color: $text__color;
-}
+  &__list {
+    @extend %roboto-mono-regular;
+    text-align: center;
 
-.footer__link:hover::after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 1px;
-  background-color: $text__color;
-  bottom: -3px;
-  left: 0;
-}
+    @media (min-width: $min__width-laptops) {
+      font-size: 16px;
+    }
 
-.footer__copyright {
-  font-size: 16px;
-}
+    &--mod {
+      @media (min-width: $min__width-laptops) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
 
-@media (min-width: $min__width-laptops) {
-  .footer-container {
-  padding: 0 50px;
-}
+    &--right {
+      @media (min-width: $min__width-laptops) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+  }
 
-.footer__logo {
-  margin-bottom: 130px;
-}
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
 
-.footer__icon-logo {
-  width: 117px;
-  height: 44px;
-}
+    & > span {
+      display: block;
+      margin-top: 35px;
 
-.footer__text {
-  margin-bottom: 30px;
-}
+      @media (min-width: $min__width-laptops) {
+        margin-top: 0;
+      }
+    }
+  }
 
-.footer__icon {
-  margin-bottom: 0;
-}
+  &__link {
+    position: relative;
+    color: $text__color;
+    text-decoration: none;
 
- .footer__wrapper {
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 0;
-  align-self: stretch;
-  margin-bottom: 50px
- }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 100%;
+      height: 1px;
+      background-color: $text__color;
+      opacity: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
 
- .footer__list--mod {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
- }
-  .footer__list--right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
- }
+    &:hover::after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
 
- .footer__icon {
-  width: 50px;
-  height: 50px;
-}
-
- .footer__list  {
-  font-size: 16px;
- }
-
- .footer__item > span {
-  margin-top: 0;
- }
+  &__copyright {
+    font-size: 16px;
+  }
 }

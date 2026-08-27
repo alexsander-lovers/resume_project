@@ -3,7 +3,7 @@
 @import 'basic/normalization';
 @import 'basic/fonts';
 @import 'basic/button';
-
+@import 'basic/button-close';
 
 @import 'blocks/container';
 @import 'blocks/header';
@@ -24,3 +24,9 @@
 @import 'blocks/education';
 
 @import 'blocks/footer';
+
+@import 'blocks/modal';
+@import 'blocks/discuss';
+@import 'blocks/form';
+@import 'blocks/contacts-modal';
+

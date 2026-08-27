@@ -1,27 +1,81 @@
 .stages-work {
   margin-bottom: 70px;
+
+  @media (min-width: $min__width-tablet) {
+    margin-bottom: 150px;
+  }
+}
+
+.stages-work__wrapper {
+  @media (min-width: $min__width-desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1100px;
+    min-width: 646px;
+    margin: 0 auto;
+    padding: 50px 45px;
+    background-color: transparent;
+    border: 1px solid $border__color;
+    border-radius: 40px;
+  }
 }
 
 .stages-work__list {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media (min-width: $min__width-desktop) {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    gap: 31px;
+  }
 }
 
 .stages-work__item {
   position: relative;
-}
 
-.stages-work__item::after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  border-bottom: 1px dotted $border__color;
-  bottom: -10px;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px dotted $border__color;
+
+    @media (min-width: $min__width-desktop) {
+      bottom: -15px;
+    }
+  }
+
+  @media (min-width: $min__width-desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+
+    &:last-child::after {
+      border: none;
+      display: none;
+    }
+  }
 }
 
 .stages-work__subtitle {
   margin-bottom: 15px;
+  @extend %roboto-mono-regular;
+
+  @media (min-width: $min__width-desktop) {
+    min-width: 230px;
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+
+  &--another {
+    @media (min-width: $min__width-desktop) {
+      margin-bottom: 200px;
+    }
+  }
 }
 
 .stages-work__title {
@@ -30,37 +84,26 @@
   letter-spacing: -0.02em;
   margin-bottom: 20px;
   text-transform: none;
+
+  @media (min-width: $min__width-desktop) {
+    width: 595px;
+    margin-bottom: 225px;
+    font-size: 65px;
+  }
 }
 
 .stages-work__text {
-  @extend %roboto-mono-regular;
   color: $main-text__color-another;
-}
-
-.stages-work__subtitle {
   @extend %roboto-mono-regular;
-}
 
-@media(min-width: $min__width-tablet) {
-  .stages-work {
-    margin-bottom: 150px;
-  }
-
-  .stages-work__subtitle {
-    margin-bottom: 70px;
+  @media (min-width: $min__width-desktop) {
+    font-size: 16px;
   }
 }
 
-@media(min-width: $min__width-desktop) {
-  .stages-work__title {
-    font-size: 65px;
-  }
-
-  .stages-work__subtitle {
-    font-size: 16px;
-  }
-
-  .stages-work__text {
-    font-size: 16px;
+.stages-work__progress {
+  @media (min-width: $min__width-desktop) {
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
   }
 }

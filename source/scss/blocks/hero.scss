@@ -1,5 +1,9 @@
 .hero {
   margin-bottom: 70px;
+
+  @media (min-width: $min__width-laptops) {
+    margin-bottom: 150px;
+  }
 }
 
 .hero__container {
@@ -7,16 +11,40 @@
   min-height: 88vh;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   overflow: hidden;
+
+  @media (min-width: $min__width-laptops) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-height: 83vh;
+    padding: 0 50px;
+    gap: 20px;
+  }
 }
 
 .hero__wrapper {
   margin-top: auto;
+
+  @media (min-width: $min__width-tablet) {
+    align-self: center;
+  }
+
+  @media (min-width: $min__width-laptops) {
+    display: flex;
+    flex-grow: 1;
+    position: static;
+  }
 }
 
 .hero__inner {
   padding: 0 10px;
+
+  @media (min-width: $min__width-laptops) {
+    padding: 0;
+    order: 2;
+  }
 }
 
 .hero__title {
@@ -25,11 +53,35 @@
   letter-spacing: -0.01em;
   margin-bottom: 15px;
   padding: 0 10px;
+
+  @media (min-width: $min__width-tablet) {
+    font-size: 55px;
+    text-align: center;
+  }
+
+  @media (min-width: $min__width-desktop) {
+    font-size: 94px;
+    width: 689px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
 }
 
 .hero__text {
   color: $main-text__color;
   @extend %roboto-mono-regular;
+
+  @media (min-width: $min__width-tablet) {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $min__width-laptops) {
+    font-size: 16px;
+    width: 285px;
+    text-align: left;
+  }
 }
 
 .hero__list {
@@ -39,108 +91,41 @@
   gap: 2px 30px;
   padding: 0 40px 15px;
   @extend %roboto-mono-regular;
+
+  @media (min-width: $min__width-laptops) {
+    font-size: 16px;
+    margin-top: 0;
+    padding: 0;
+  }
 }
 
 .hero__item {
   position: relative;
   color: $main-text__color;
+
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: -15px;
+    z-index: 2;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: $main-text__color;
+  }
 }
 
-.hero__item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background-color: $main-text__color;
-  top: 5px;
-  right: -15px;
-  z-index: 2;
-}
-
-@media(max-width: $max__width-mobile) {
- .hero__inner-button {
+.hero__inner-button {
   display: none;
- }
+
+  @media (min-width: $min__width-tablet) {
+    display: block;
+  }
 }
 
-@media(min-width: $min__width-tablet) {
-
-  .hero__wrapper {
-    align-self: center;
-  }
-
-  .hero__inner-button {
-    display: block;
- }
-
-  .hero__title {
-    font-size: 55px;
-    text-align: center;
-  }
-
-  .hero__text {
-  text-align: center;
-  margin-bottom: 25px;
-  }
-
-  .button__icon {
+.button__icon {
+  @media (min-width: $min__width-tablet) {
     width: 320px;
   }
-  }
-
-@media(min-width: $min__width-laptops) {
-  .hero {
-    margin-bottom: 150px;
-  }
-
-  .hero__container {
-    align-items: flex-end;
-    justify-content: space-between;
-    flex-direction: row;
-    min-height: 83vh;
-    padding: 0 50px;
-    gap: 20px
-  }
-
-  .hero__inner {
-    padding: 0;
-  }
-
-  .hero__wrapper {
-    display: flex;
-    flex-grow: 1;
-  }
-
-  .hero__text {
-    font-size: 16px;
-    width: 285px;
-    text-align: left;
-  }
-
-  .hero__inner {
-    order: 2;
-  }
-
-  .hero__list {
-    font-size: 16px;
-    margin-top: 0;
-    padding: 0;
-  }
-
-  .hero__wrapper {
-    display: flex;
-    flex-grow: 1;
-    position: static;
-  }
-}
-
-@media(min-width: $min__width-desktop) {
-.hero__title {
-  width: 689px;
-  font-size: 94px;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
 }

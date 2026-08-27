@@ -1,0 +1,50 @@
+.contacts-modal {
+  &__text {
+    @extend %inter__tight-regular;
+    margin-bottom: 20px;
+    color: $main-text__color;
+    letter-spacing: -0.01em;
+    text-transform: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    @media (min-width: $min__width-tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    border: 1px solid $border__color;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+
+
+    &:hover,
+    &:focus-within {
+      border-color: $main-text__color;
+      background-color: $bg-card;
+
+      .contacts-modal__link {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    color: $text__color;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+}
