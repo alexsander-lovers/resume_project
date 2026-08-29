@@ -1,47 +1,58 @@
-<header class="header header-container">
-  <a href="#" class="header__logo logo">
-    <svg width="66" height="25">
-      <use href="images/icons/sprite/icon.svg#logo"></use>
-    </svg>
-  </a>
-  <nav class="navigation">
-    <ul class="navigation__list">
-      <li class="navigation__item">
-        <a href="#about" class="navigation__link">Обо мне</a>
-      </li>
-      <li class="navigation__item">
-        <a href="#skills" class="navigation__link">Навыки</a>
-      </li>
-      <li class="navigation__item">
-        <a href="#" class="navigation__link">Опыт</a>
-      </li>
-      <li class="navigation__item">
-        <a href="#education" class="navigation__link">Образование</a>
-      </li>
-      <li class="navigation__item">
-        <a href="#phone" class="navigation__link">Контакты</a>
-      </li>
-    </ul>
-    <button class="navigation__button button button-js" type="button">
-      <svg class="button__icon" width="255" height="50" viewBox="0 0 255 50" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M198 0C200.761 5.15405e-07 203 2.23858 203 5V12H205V5C205 2.23858 207.239 4.0266e-08 210 0H250C252.761 6.44256e-07 255 2.23858 255 5V45C255 47.7614 252.761 50 250 50H210C207.239 50 205 47.7614 205 45V38H203V45C203 47.7614 200.761 50 198 50H5C2.23858 50 4.02673e-08 47.7614 0 45V5C6.44277e-07 2.23858 2.23858 0 5 0H198ZM230 4C218.402 4 209 13.402 209 25C209 36.598 218.402 46 230 46C241.598 46 251 36.598 251 25C251 13.402 241.598 4 230 4Z"
-          fill="white" />
-        <text class="button__icon-text" x="20" y="30" font-family="Arial" font-size="14" fill="black">
-          Получить консультацию
-        </text>
+<header class="header">
+  <div class="header-container">
+    <a href="#" class="header__logo logo" aria-label="Логотип сайта">
+      <svg width="66" height="25">
+        <use href="images/icons/sprite/icon.svg#logo"></use>
       </svg>
+    </a>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="#about" class="navigation__link">Обо мне</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#skills" class="navigation__link">Навыки</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">Опыт</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#education" class="navigation__link">Образование</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#phone" class="navigation__link">Контакты</a>
+        </li>
+      </ul>
+      <button class="navigation__button button button-js" type="button" aria-label="Получить консультацию">
+        <svg class="button__icon" width="255" height="50" viewBox="0 0 255 50" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M198 0C200.761 5.15405e-07 203 2.23858 203 5V12H205V5C205 2.23858 207.239 4.0266e-08 210 0H250C252.761 6.44256e-07 255 2.23858 255 5V45C255 47.7614 252.761 50 250 50H210C207.239 50 205 47.7614 205 45V38H203V45C203 47.7614 200.761 50 198 50H5C2.23858 50 4.02673e-08 47.7614 0 45V5C6.44277e-07 2.23858 2.23858 0 5 0H198ZM230 4C218.402 4 209 13.402 209 25C209 36.598 218.402 46 230 46C241.598 46 251 36.598 251 25C251 13.402 241.598 4 230 4Z"
+            fill="white" />
+          <text class="button__icon-text" x="20" y="30" font-family="Arial" font-size="14" fill="black">
+            Получить консультацию
+          </text>
+        </svg>
+      </button>
+      <button class="navigation__user-menu user-menu user-menu--active button-js" type="button"
+        aria-label="Получить консультацию и заполнить форму">
+        <span class="user-menu__point"></span>
+        <span class="user-menu__point"></span>
+        <span class="user-menu__point"></span>
+      </button>
+    </nav>
+    <details class="header__menu-language menu-language">
+      <summary class="menu-language__title">RU</summary>
+      <ul class="menu-language__list">
+        <li class="menu-language__item menu-language__item--is-active"><button class="menu-language__button"
+            type="button" aria-label="Сайт на русском языке">RU</button></li>
+        <li class="menu-language__item"><button class="menu-language__button" type="button"
+            aria-label="Сайт на англиском языке">EN</button></li>
+      </ul>
+    </details>
+    <button class="header__burger burger" type="button" aria-label="Бургерное меню">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
     </button>
-    <button class="navigation__user-menu user-menu user-menu--active button-js" type="button">
-      <span class="user-menu__point"></span>
-      <span class="user-menu__point"></span>
-      <span class="user-menu__point"></span>
-    </button>
-  </nav>
-  <button class="header__menu-language menu-language" type="button">ru</button>
-  <button class="header__burger burger" type="button">
-    <span class="burger__line"></span>
-    <span class="burger__line"></span>
-  </button>
+  </div>
 </header>

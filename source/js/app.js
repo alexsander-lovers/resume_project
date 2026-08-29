@@ -26,3 +26,17 @@ window.addEventListener('click', (event) => {
     modal.style.display = 'none';
   }
 });
+
+const summary = document.querySelector('.menu-language__title')
+
+summary.addEventListener('click', function(e) {
+  const details = this.closest('details');
+
+  if (!details.hasAttribute('open')) {
+    details.setAttribute('open', '');
+  }
+
+  this.hidden = true;
+
+  e.preventDefault();
+});

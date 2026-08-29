@@ -1,6 +1,7 @@
 import fileInclude from 'gulp-file-include';
 // import webpHtmlNosvg from 'gulp-webp-html-nosvg';
 import versionNumber from 'gulp-version-number';
+import minHtml from 'gulp-html-minifier';
 
 export const html = () => {
   return app.gulp.src(app.path.source.html)
@@ -25,6 +26,7 @@ export const html = () => {
         'file': 'gulp/version.json'
       }
   })))
+  .pipe(minHtml({ collapseWhitespace : true }))
   .pipe(app.gulp.dest(app.path.build.html))
   .pipe(app.plugins.browsersync.stream())
 };

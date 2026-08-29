@@ -6,7 +6,8 @@
 
 <body>
   <div class="video-bg">
-    <video class="video-bg__media" autoplay muted loop playsinline>
+    <video class="video-bg__media" autoplay muted loop playsinline poster="images/bg_video_poster.jpg"
+      preload="metadata">
       <source src="video/hero.mp4" type="video/mp4">
       Ваш браузер не поддерживает тег video.
     </video>
@@ -19,7 +20,7 @@
           <h1 class="hero__title">Твой дизайн в идеальном {коде}</h1>
           <div class="hero__inner">
             <p class="hero__text">Профессиональная верстка сайтов с пиксельной точностью и без костылей.</p>
-            <button class="hero__inner-button button button-js" type="button">
+            <button class="hero__inner-button button button-js" type="button" aria-label="Получить консультацию">
               <svg class="button__icon" width="255" height="50" viewBox="0 0 255 50" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -107,16 +108,16 @@
                       srcset="images/skills_card_1--desktop.png 1x, images/skills_card_1--desktop@2x.png 2x">
                     <img class="skills__img" src="images/skills_card_1--mobail.png"
                       srcset="images/skills_card_1--mobail@2x.png 2x" alt="Показывается декоративный элемент"
-                      width="312" height="227">
+                      width="312" height="226">
                   </picture>
                 </div>
                 <div class="skills__inner">
                   <div class="skills__container-number">
                     <img src="images/icons/skill_card_icon-left.svg" width="10" height="30"
-                      alt="Обрамление для заголовка">
+                      alt="Обрамление для заголовка" loading="lazy">
                     <h3 class="skills__title">01</h3>
                     <img src="images/icons/skill_card_icon-right.svg" width="10" height="30"
-                      alt="Обрамление для заголовка">
+                      alt="Обрамление для заголовка" loading="lazy">
                   </div>
                   <h4 class="skills__subtitle-another">Базовый стек</h4>
                   <p class="skills__subtext">(HTML5 / CSS3 / Семантика) — умение создавать доступную, кроссбраузерную и
@@ -142,17 +143,17 @@
                       srcset="images/skills_card_2--desktop.png 1x, images/skills_card_2--desktop@2x.png 2x">
                     <img class="skills__img" src="images/skills_card_1--mobail.png"
                       srcset="images/skills_card_2--mobail@2x.png 2x" alt="Показывается декоративный элемент"
-                      width="312" height="227">
+                      width="312" height="226" loading="lazy">
                   </picture>
                 </div>
 
                 <div class="skills__inner skills__inner--odd">
                   <div class="skills__container-number">
                     <img src="images/icons/skill_card_icon-left.svg" width="10" height="30"
-                      alt="Обрамление для заголовка">
+                      alt="Обрамление для заголовка" loading="lazy">
                     <h3 class="skills__title">02</h3>
                     <img src="images/icons/skill_card_icon-right.svg" width="10" height="30"
-                      alt="Обрамление для заголовка">
+                      alt="Обрамление для заголовка" loading="lazy">
                   </div>
                   <h4 class="skills__subtitle-another">JavaScript TypeScript</h4>
                   <p class="skills__subtext">уверенное знание синтаксиса, асинхронного кода, работы с API и типизации
@@ -179,16 +180,16 @@
                       srcset="images/skills_card_3--desktop.png 1x, images/skills_card_3--desktop@2x.png 2x">
                     <img class="skills__img" src="images/skills_card_1--mobail.png"
                       srcset="images/skills_card_3--mobail@2x.png 2x" alt="Показывается декоративный элемент"
-                      width="312" height="227">
+                      width="312" height="226" loading="lazy">
                   </picture>
                 </div>
                 <div class="skills__inner">
                   <div class="skills__container-number">
                     <img src="images/icons/skill_card_icon-left.svg" width="10" height="30"
-                      alt="Обрамление для заголовка">
+                      alt="Обрамление для заголовка" loading="lazy">
                     <h3 class="skills__title">03</h3>
                     <img src="images/icons/skill_card_icon-right.svg" width="10" height="30"
-                      alt="Обрамление для заголовка">
+                      alt="Обрамление для заголовка" loading="lazy">
                   </div>
                   <h4 class="skills__subtitle-another">Современные фреймворки</h4>
                   <p class="skills__subtext">(React / Vue / Angular) — глубокое понимание хотя бы одной библиотеки для
@@ -214,17 +215,17 @@
                       srcset="images/skills_card_4--desktop.png 1x, images/skills_card_4--desktop@2x.png 2x">
                     <img class="skills__img" src="images/skills_card_1--mobail.png"
                       srcset="images/skills_card_4--mobail@2x.png 2x" alt="Показывается декоративный элемент"
-                      width="312" height="227">
+                      width="312" height="226" loading="lazy">
                   </picture>
                 </div>
 
                 <div class="skills__inner skills__inner--odd">
                   <div class="skills__container-number">
                     <img src="images/icons/skill_card_icon-left.svg" width="10" height="30"
-                      alt="Обрамление для заголовка">
+                      alt="Обрамление для заголовка" loading="lazy">
                     <h3 class="skills__title">04</h3>
                     <img src="images/icons/skill_card_icon-right.svg" width="10" height="30"
-                      alt="Обрамление для заголовка">
+                      alt="Обрамление для заголовка" loading="lazy">
                   </div>
                   <h4 class="skills__subtitle-another">Система контроля версий</h4>
                   <p class="skills__subtext">(Git) — владение Git и сервисами GitHub/GitLab на уровне работы в команде
@@ -250,16 +251,16 @@
                       srcset="images/skills_card_5--desktop.png 1x, images/skills_card_5--desktop@2x.png 2x">
                     <img class="skills__img" src="images/skills_card_1--mobail.png"
                       srcset="images/skills_card_5--mobail@2x.png 2x" alt="Показывается декоративный элемент"
-                      width="312" height="227">
+                      width="312" height="226" loading="lazy">
                   </picture>
                 </div>
                 <div class="skills__inner">
                   <div class="skills__container-number">
                     <img src="images/icons/skill_card_icon-left.svg" width="10" height="30"
-                      alt="Обрамление для заголовка">
+                      alt="Обрамление для заголовка" loading="lazy">
                     <h3 class="skills__title">05</h3>
                     <img src="images/icons/skill_card_icon-right.svg" width="10" height="30"
-                      alt="Обрамление для заголовка">
+                      alt="Обрамление для заголовка" loading="lazy">
                   </div>
                   <h4 class="skills__subtitle-another">Инструменты сборки и оптимизации</h4>
                   <p class="skills__subtext">(Vite / Webpack / Сhrome DevTools) — умение собирать проект, настраивать
@@ -335,7 +336,7 @@
                   <li class="education__item">/ /Тестирование и бэкенд</li>
                 </ul>
               </div>
-              <button class="education__button button" type="button">
+              <button class="education__button button" type="button" aria-label="Посмотреть сертификаты">
                 <svg class="education__icon button__icon" width="255" height="50" viewBox="0 0 255 50" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -354,7 +355,7 @@
     @@include('html_companents/footer.html')
     @@include('html_companents/modal.html')
   </div>
-  <script src="js/app.min.js"></script>
+  <script src="js/app.min.js" defer></script>
 </body>
 
 </html>

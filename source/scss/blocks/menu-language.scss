@@ -1,26 +1,69 @@
 .menu-language {
   display: flex;
-  justify-content: left;
   align-items: center;
-  flex-wrap: wrap;
-  min-width: 68px;
-  height: 40px;
-  color: $text__color;
-  font-size: 16px;
-  line-height: 120%;
-  padding: 0 15px;
-  border: 1px solid $border__color;
-  border-radius: 5px;
-  background-color: transparent;
-}
+  position: relative;
+  padding: 15px 33px 9px 15px;
 
-.menu-language__text {
-  display: block;
-  color: $text__color;
-}
-
-@media (min-width: $min__width-tablet) {
-  .menu-language {
+  @media(min-width: $min__width-tablet) {
     display: none;
+  }
+
+  &__title {
+    position: relative;
+    list-style: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      top: 5px;
+      right: -15px;
+      background-image: url('../images/icons/icon_select_down.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__list{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__item {
+     display: flex;
+  align-items: center;
+  }
+
+  &__button{
+    position: relative;
+    padding: 12px 33px 9px 15px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: $text__color;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s, border-color 0.2s;
+
+    &:hover,
+    &:focus-visible {
+      border-color: $border__color-button;
+      background-color: $border__color;
+      outline: none;
+    }
+
+    &:hover::after,
+    &:focus-visible {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      top: 15px;
+      right: 15px;
+      background-image: url('../images/icons/icon_select_up.svg');
+      background-repeat: no-repeat;
+
+    }
   }
 }

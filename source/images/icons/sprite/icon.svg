@@ -59,4 +59,9 @@
     </clipPath>
     </defs>
   </symbol>
+
+  <symbol class='icon_arrow_down' id='icon_arrow_down' viewBox="0 0 30 30" fill="none">
+    <path d="M20.9902 15.2023L15.1323 21.2275L9.27445 15.2023M15.1323 20.3907L15.1323 8.1728" stroke="currentColor" stroke-width="2.10498" stroke-miterlimit="10" stroke-linecap="square"/>
+  </symbol>
+
 </svg>
