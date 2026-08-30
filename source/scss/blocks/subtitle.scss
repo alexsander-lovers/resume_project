@@ -1,6 +1,7 @@
 .subtitle {
   position: relative;
   display: flex;
+  flex-direction: column;
   font-size: 12px;
   color: $main-text__color;
   @extend %roboto-mono-regular;

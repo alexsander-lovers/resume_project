@@ -4,186 +4,106 @@
   @media (min-width: $min__width-tablet) {
     margin-bottom: 150px;
   }
-}
 
-.stages-work__wrapper {
-  @media (min-width: $min__width-desktop) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 1100px;
-    min-width: 646px;
-    margin: 0 auto;
-    padding: 50px 45px;
-    background-color: transparent;
-    border: 1px solid $border__color;
-    border-radius: 40px;
-  }
-}
-
-.stages-work__list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  @media (min-width: $min__width-desktop) {
-    grid-row: 2 / 3;
-    grid-column: 1 / -1;
-    gap: 31px;
-  }
-}
-
-.stages-work__item {
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px dotted $border__color;
-
+  &__wrapper {
     @media (min-width: $min__width-desktop) {
-      bottom: -15px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 1100px;
+      min-width: 646px;
+      margin: 0 auto;
+      padding: 50px 45px;
+      background-color: transparent;
+      border: 1px solid $border__color;
+      border-radius: 40px;
     }
   }
 
-  @media (min-width: $min__width-desktop) {
+  &__list{
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    flex-direction: column;
     gap: 20px;
 
-    &:last-child::after {
-      border: none;
-      display: none;
-    }
-  }
-}
-
-.stages-work__subtitle {
-  margin-bottom: 15px;
-  @extend %roboto-mono-regular;
-
-  @media (min-width: $min__width-desktop) {
-    min-width: 230px;
-    margin-bottom: 0;
-    font-size: 16px;
-  }
-
-  &--another {
     @media (min-width: $min__width-desktop) {
-      margin-bottom: 200px;
+      grid-row: 2 / 3;
+      grid-column: 1 / -1;
+      gap: 31px;
+    }
+  }
+
+  &__item{
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px dotted $border__color;
+
+      @media (min-width: $min__width-desktop) {
+        bottom: -15px;
+      }
+    }
+
+    @media (min-width: $min__width-desktop) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+
+      &:last-child::after {
+        border: none;
+        display: none;
+      }
+    }
+  }
+
+  &__subtitle{
+    margin-bottom: 15px;
+    @extend %roboto-mono-regular;
+
+    @media (min-width: $min__width-desktop) {
+      min-width: 230px;
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+
+    &--another {
+      @media (min-width: $min__width-desktop) {
+        margin-bottom: 200px;
+      }
+    }
+  }
+
+  &__title{
+    font-size: 25px;
+    line-height: 94%;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    text-transform: none;
+
+    @media (min-width: $min__width-desktop) {
+      width: 595px;
+      margin-bottom: 225px;
+      font-size: 65px;
+    }
+  }
+
+  &__text{
+    color: $main-text__color-another;
+    @extend %roboto-mono-regular;
+
+    @media (min-width: $min__width-desktop) {
+      font-size: 16px;
+    }
+  }
+
+    &__progress{
+      @media (min-width: $min__width-desktop) {
+      grid-row: 3 / 4;
+      grid-column: 1 / -1;
     }
   }
 }
-
-.stages-work__title {
-  font-size: 25px;
-  line-height: 94%;
-  letter-spacing: -0.02em;
-  margin-bottom: 20px;
-  text-transform: none;
-
-  @media (min-width: $min__width-desktop) {
-    width: 595px;
-    margin-bottom: 225px;
-    font-size: 65px;
-  }
-}
-
-.stages-work__text {
-  color: $main-text__color-another;
-  @extend %roboto-mono-regular;
-
-  @media (min-width: $min__width-desktop) {
-    font-size: 16px;
-  }
-}
-
-.stages-work__progress {
-  @media (min-width: $min__width-desktop) {
-    grid-row: 3 / 4;
-    grid-column: 1 / -1;
-  }
-}
-
-
-// .slider-container {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   gap: 25px;
-// }
-
-// .card-stack {
-//   position: relative;
-//   width: 300px;
-//   height: 400px;
-// }
-// .card {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   border-radius: 20px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   color: white;
-//   font-size: 24px;
-//   font-weight: bold;
-//   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-//   transition: transform 0.5s ease, opacity 0.5s ease;
-
-//   /* Эффект уменьшения и сдвига вверх */
-//   transform:
-//     translateY(calc(var(--i) * -25px))
-//     scale(calc(1 - var(--i) * 0.05));
-
-//   z-index: calc(100 - var(--i));
-//   opacity: calc(1 - var(--i) * 0.2);
-// }
-// .color-1 { background: #ff4757; }
-// .color-2 { background: #2ed573; }
-// .color-3 { background: #1e90ff; }
-// .color-4 { background: #ffa502; }
-
-// .next-btn {
-//   padding: 12px 24px;
-//   font-size: 16px;
-//   border: none;
-//   border-radius: 8px;
-//   background: #333;
-//   color: #fff;
-//   cursor: pointer;
-//   transition: background 0.2s;
-// }
-// .next-btn:hover { background: #555; }
-
-// /* Стили прогресс-бара */
-// .progress-container {
-//   width: 300px;
-//   text-align: center;
-// }
-
-// .progress-bar {
-//   width: 100%;
-//   height: 8px;
-//   background: #e0e0e0;
-//   border-radius: 4px;
-//   overflow: hidden;
-//   margin-bottom: 8px;
-// }
-// .progress-fill {
-//   height: 100%;
-//   width: 0%; /* Меняется через JS */
-//   background: #2ed573;
-//   border-radius: 4px;
-//   transition: width 0.4s ease; /* Плавное заполнение */
-// }
-
-// .progress-text {
-//   font-size: 14px;
-//   color: #666;
-//   font-weight: bold;
-// }

@@ -26,12 +26,12 @@
       }
     }
   }
-}
 
-.user-menu__point {
-  display: flex;
-  width: 4px;
-  height: 4px;
-  background-color: $text__color;
-  border-radius: 1px;
+  &__point{
+    display: flex;
+    width: 4px;
+    height: 4px;
+    background-color: $text__color;
+    border-radius: 1px;
+  }
 }
